@@ -6,7 +6,7 @@
   failed_when: not result.stat.exists
 
 - include: debian.yml
-  when: ansible_os_family == "Debian"
+  when: ansible_os_family == "Debian" or ansible_os_family == "Astra Linux"
 
 - include: red_hat.yml
   when: ansible_os_family == "RedHat"
